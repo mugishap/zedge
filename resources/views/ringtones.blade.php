@@ -9,6 +9,6 @@
 </head>
 <body class="w-screen h-screen bg-blue-500">
 <x-navbar></x-navbar>
-<x-tabs></x-tabs>
+<x-tabs {{$page}}></x-tabs>
 </body>
 </html>

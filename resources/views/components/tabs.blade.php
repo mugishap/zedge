@@ -1,7 +1,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
-<div class="w-screen h-16 bg-white flex items-center justify-center">
-<div class="text-lg text-slate-700 h-full flex items-center justify-center border-b-4 border-b-purple-500 px-3 text-center mx-2">All</div>
-<div class="text-lg text-slate-700 h-full flex items-center justify-center border-b-4 border-b-purple-500 px-3 text-center mx-2">Ringtones</div>
-<div class="text-lg text-slate-700 h-full flex items-center justify-center border-b-4 border-b-purple-500 px-3 text-center mx-2">Wallpapers</div>
-<div class="text-lg text-slate-700 h-full flex items-center justify-center border-b-4 border-b-purple-500 px-3 text-center mx-2">Live Wallpapers</div>
+<div class="w-screen h-14 bg-white flex items-center justify-center">
+<div class=`cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center ${$this->page === 'all' ? 'border-b-4' : ''} border-b-purple-500 px-3 text-center mx-2`><a class="w-full h-full flex items-center justify-center" href="/all">All</a></div>
+<div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center border-b-4 border-b-purple-500 px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="">Ringtones</a></div>
+<div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center border-b-4 border-b-purple-500 px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="">Wallpapers</a></div>
+<div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center border-b-4 border-b-purple-500 px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="">Live Wallpapers</a></div>
 </div>
