@@ -34,3 +34,11 @@ Route::get('/live-wallpapers', function () {
 Route::get('/ringtones', function () {
     return view('ringtones',['page' => 'ringtones']);
 });
+
+Route::get('/signup', function () {
+    return view('signup',['page' => 'signup']);
+});
+
+Route::get('/login', function () {
+    return view('login',['page' => 'login']);
+});

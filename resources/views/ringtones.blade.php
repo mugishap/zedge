@@ -20,7 +20,7 @@
 <body class="w-screen h-screen ">
 <x-navbar></x-navbar>
 <x-tabs></x-tabs>
-<div class="mt-4 card-holder w-screen grid grid-cols-6 gap-3 overflow-y-scroll">
+<div class="mt-4 card-holder w-screen grid xl:grid-cols-5    md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 overflow-y-scroll">
 <x-card></x-card>
 <x-card></x-card>
 <x-card></x-card>
