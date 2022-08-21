@@ -27,9 +27,6 @@
             <div class="flex items-center justify-center border-2 border-black rounded-full w-4/5 p-2 my-2">
             <img class="w-8 mr-4" src="https://svgsilh.com/svg/2962084.svg" alt=""><div class="flex items-center justify-start">Continue with Apple</div>
             </div>
-        <div class="flex items-center justify-center border-2 border-black rounded-full w-4/5 p-2 my-2">
-            <div class="flex items-center justify-start">Continue with Email</div>
-        </div>
         <span class="w-3/5 text-center">By continuing you agree with Zedge's
 <br>
 <a class="text-blue-600" href="#">Terms of Service</a> and <a class="text-blue-600" href="#">Privacy Policy.</a></span>
