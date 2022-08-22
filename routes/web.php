@@ -13,32 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/all', function () {
-    return view('All',['page' => 'all']);
+    return view('All', ['page' => 'all']);
 });
 
 Route::get('/wallpapers', function () {
-    return view('wallpapers',['page' => 'wallpapers']);
+    return view('wallpapers', ['page' => 'wallpapers']);
 });
 
 Route::get('/user', function () {
-    return view('user',['page' => 'user']);
+
+    return view('user', ['page' => 'user']);
 });
 
 
 Route::get('/live-wallpapers', function () {
-    return view('live-wallpapers',['page' => 'live-wallpapers']);
+    return view('live-wallpapers', ['page' => 'live-wallpapers']);
 });
 
-
 Route::get('/ringtones', function () {
-    return view('ringtones',['page' => 'ringtones']);
+    return view('ringtones', ['page' => 'ringtones']);
 });
 
 Route::get('/signup', function () {
-    return view('signup',['page' => 'signup']);
+    return view('signup', ['page' => 'signup']);
 });
 
 Route::get('/login', function () {
-    return view('login',['page' => 'login']);
+    return view('login', ['page' => 'login']);
 });
