@@ -8,7 +8,7 @@
     <title>Ringtones</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+    <script defer type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
 </head>
 
@@ -22,7 +22,7 @@
     <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center  border-b-purple-500 px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="/live-wallpapers">Live Wallpapers</a></div>
 </div>
 
-    <div class="mt-4 card-holder w-screen grid xl:grid-cols-5    md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 overflow-y-scroll">
+    <div class="ringtones-holder mt-4 card-holder w-screen grid xl:grid-cols-5    md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 overflow-y-scroll">
 
     </div>
 </body>
