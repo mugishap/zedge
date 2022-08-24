@@ -28,6 +28,18 @@ Route::get('/user', function () {
 });
 
 
+Route::get('/profile', function () {
+
+    return view('profile', ['page' => 'profile']);
+});
+
+
+Route::get('/upload', function () {
+
+    return view('upload', ['page' => 'upload']);
+});
+
+
 Route::get('/live-wallpapers', function () {
     return view('live-wallpapers', ['page' => 'live-wallpapers']);
 });

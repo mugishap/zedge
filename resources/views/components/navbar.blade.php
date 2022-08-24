@@ -11,13 +11,13 @@ search
  <input class="w-11/12 h-full text-[#555] outline-0 border-0 text-sm bg-slate-200 placeholder:text-sm" type="text" placeholder="Search Wallpapers and Ringtones">
 </div>
 <div class="hidden w-8 cursor-pointer h-8 rounded-full bg-purple-500 md:flex items-center justify-center">
-<span class="material-icons text-white">
+<a href='/upload' class="material-icons text-white">
 arrow_upward
-</span>
+</a>
 </div>
-<span class="material-icons mx-4  text-xl">
+<a href='/profile' class="material-icons mx-4  text-xl">
 person_outlined
-</span>
+</a>
 <span class="material-icons text-xl">
 menu
 </span>

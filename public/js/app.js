@@ -25,16 +25,16 @@ const getRingtones = async () => {
         const div = document.createElement('div')
         const overlay = document.createElement('div')
         const img = document.createElement('img')
-        const imgStyles = ['rounded-lg', 'w-full','h-full']
+        const imgStyles = ['rounded-lg', 'w-full', 'h-full']
 
         overlay.innerHTML = `<span style='transform: scale(3);' id='ringtone-play-button' class='scale-110 cursor-pointer material-icons rounded-full text-white my-auto border-white border-2 p-[5px]'>play_arrow</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
-       
-        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center','flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
+
+        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center', 'flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         overlayStyles.forEach((style) => {
             overlay.classList.add(style)
         })
 
-        const divStyles = [`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]/80`,'h-[54vh]','relative','rounded-[10px]']
+        const divStyles = [`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]/80`, 'h-[54vh]', 'relative', 'rounded-[10px]']
 
         divStyles.forEach((style) => {
             div.classList.add(style)
@@ -50,7 +50,10 @@ const getRingtones = async () => {
         ringtonesHolder.append(div)
         const ringtonePlayButton = document.querySelector('#ringtone-play-button')
     });
-    // return res
+    ringtonesHolder.addEventListener('click', () => {
+
+    })
+
 }
 
 
@@ -80,12 +83,12 @@ const getWallpapers = async () => {
     data.forEach(element => {
         const div = document.createElement('div')
         const img = document.createElement('img')
-        const divStyles = ['rounded-lg', 'flex','h-[54vh]',`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
-        const imgStyles = ['rounded-lg', 'w-full','h-full']
-        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center','flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
+        const divStyles = ['rounded-lg', 'flex', 'h-[54vh]', `bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
+        const imgStyles = ['rounded-lg', 'w-full', 'h-full']
+        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center', 'flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         const overlay = document.createElement('div')
         overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
-       
+
         overlayStyles.forEach((style) => {
             overlay.classList.add(style)
         })
@@ -96,9 +99,9 @@ const getWallpapers = async () => {
         divStyles.forEach(style => {
             div.classList.add(style)
         })
-        img.style.width='100%'
-        img.style.height='100%'
-        img.style.objectFit='cover'
+        img.style.width = '100%'
+        img.style.height = '100%'
+        img.style.objectFit = 'cover'
         img.src = element.imageUrl
         div.append(img)
         div.append(overlay)
@@ -107,7 +110,7 @@ const getWallpapers = async () => {
     // return res
 }
 
-const getRingtonesAndWallpapers = async() => {
+const getRingtonesAndWallpapers = async () => {
 
     const api = await fetch('https://api-gateway.zedge.net', {
         method: 'POST',
@@ -132,12 +135,12 @@ const getRingtonesAndWallpapers = async() => {
 
     data.forEach(element => {
         const div = document.createElement('div')
-        const divStyles = ['rounded-lg', 'flex','h-[54vh]',`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
-        const imgStyles = ['rounded-lg', 'w-full','h-full']
+        const divStyles = ['rounded-lg', 'flex', 'h-[54vh]', `bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
+        const imgStyles = ['rounded-lg', 'w-full', 'h-full']
         const img = document.createElement('img')
         const overlay = document.createElement('div')
-        element.contentType === 'RINGTONE' ? overlay.innerHTML = `<span id='ringtone-play-button' class='text-4xl cursor-pointer material-icons text-white my-auto'>play_arrow</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>` :overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
-        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center','flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
+        element.contentType === 'RINGTONE' ? overlay.innerHTML = `<span id='ringtone-play-button' class='text-4xl cursor-pointer material-icons text-white my-auto'>play_arrow</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>` : overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
+        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center', 'flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         overlayStyles.forEach((style) => {
             overlay.classList.add(style)
         })
@@ -147,9 +150,9 @@ const getRingtonesAndWallpapers = async() => {
         divStyles.forEach(style => {
             div.classList.add(style)
         })
-        img.style.width='100%'
-        img.style.height='100%'
-        img.style.objectFit='cover'
+        img.style.width = '100%'
+        img.style.height = '100%'
+        img.style.objectFit = 'cover'
         img.src = element.imageUrl
         div.append(img)
         div.append(overlay)
