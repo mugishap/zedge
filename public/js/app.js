@@ -75,7 +75,7 @@ const getWallpapers = async () => {
         const div = document.createElement('div')
         const img = document.createElement('img')
         const divStyles = ['rounded-lg', 'flex','h-[54vh]',`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
-        const imgStyles = ['rounded-lg', 'w-full','h-full','object-cover']
+        const imgStyles = ['rounded-lg', 'w-full','h-full']
         const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center','flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         const overlay = document.createElement('div')
         overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
@@ -127,7 +127,7 @@ const getRingtonesAndWallpapers = async() => {
     data.forEach(element => {
         const div = document.createElement('div')
         const divStyles = ['rounded-lg', 'flex','h-[54vh]',`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
-        const imgStyles = ['rounded-lg', 'w-full','h-full','object-cover']
+        const imgStyles = ['rounded-lg', 'w-full','h-full']
         const img = document.createElement('img')
         const overlay = document.createElement('div')
         element.contentType === 'RINGTONE' ? overlay.innerHTML = `<span id='ringtone-play-button' class='text-4xl cursor-pointer material-icons text-white my-auto'>play_circle</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>` :overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
