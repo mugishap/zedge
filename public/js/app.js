@@ -25,17 +25,23 @@ const getRingtones = async () => {
         const div = document.createElement('div')
         const overlay = document.createElement('div')
         const img = document.createElement('img')
-        overlay.innerHTML = `<span id='ringtone-play-button' class='text-4xl cursor-pointer material-icons text-white my-auto'>play_circle</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
+        const imgStyles = ['rounded-lg', 'w-full','h-full']
+
+        overlay.innerHTML = `<span id='ringtone-play-button' class='text-4xl cursor-pointer material-icons text-white my-auto border-white border-2 p-12'>play_arrow</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
        
         const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center','flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         overlayStyles.forEach((style) => {
             overlay.classList.add(style)
         })
 
-        const divStyles = [`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]/80`,'relative','rounded-[10px]']
+        const divStyles = [`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]/80`,'h-[54vh]','relative','rounded-[10px]']
 
         divStyles.forEach((style) => {
             div.classList.add(style)
+        })
+
+        imgStyles.forEach((style) => {
+            img.classList.add(style)
         })
 
         img.src = element.imageUrl
@@ -130,7 +136,7 @@ const getRingtonesAndWallpapers = async() => {
         const imgStyles = ['rounded-lg', 'w-full','h-full']
         const img = document.createElement('img')
         const overlay = document.createElement('div')
-        element.contentType === 'RINGTONE' ? overlay.innerHTML = `<span id='ringtone-play-button' class='text-4xl cursor-pointer material-icons text-white my-auto'>play_circle</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>` :overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
+        element.contentType === 'RINGTONE' ? overlay.innerHTML = `<span id='ringtone-play-button' class='text-4xl cursor-pointer material-icons text-white my-auto'>play_arrow</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>` :overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
         const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center','flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         overlayStyles.forEach((style) => {
             overlay.classList.add(style)
