@@ -10,20 +10,11 @@
     <script defer type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('images/download.png') }}">
-        <style>
-            * {
-        -ms-overflow-style: none;  /* Internet Explorer 10+ */
-        scrollbar-width: none;  /* Firefox */
-    }
-    *::-webkit-scrollbar { 
-        display: none;  /* Safari and Chrome */
-    }
-    </style>
     </head>
     <body class="w-screen h-screen ">
     <x-navbar></x-navbar>
 
-    <div class="w-screen h-14 py-[3px] shadow-[#555] shadow-sm bg-white flex items-center justify-center">
+    <div class="w-screen h-14 pt-[3px] pb-0 overflow-x-scroll shadow-[#555] shadow-sm bg-white flex items-center justify-center">
     <div class='cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center  border-b-purple-500 px-3 text-center mx-2'><a class="w-full h-full flex items-center justify-center" href="/all">All</a></div>
     <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center  border-b-purple-500 px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="/wallpapers">Wallpapers</a></div>
     <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center border-b-purple-500 px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="/ringtones">Ringtones</a></div>

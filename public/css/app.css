@@ -1,14 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300;1,400&display=swap");
 * {
-    -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
-    scrollbar-width: none;
-    /* Firefox */
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
 }
 
-*::-webkit-scrollbar {
-    display: none;
-    /* Safari and Chrome */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
 }
-.background-form{
-    background-image: url('https://account.zedge.net/assets/39c21da069cb5d01cc0964a0cb021818.svg');
+
+::-webkit-scrollbar-thumb {
+    background: rgb(241, 241, 241);
+}
+::-webkit-scrollbar-track {
+    background: rgb(241, 241, 241);
+}
+.background-form {
+    background-image: url("https://account.zedge.net/assets/39c21da069cb5d01cc0964a0cb021818.svg");
 }
