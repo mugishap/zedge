@@ -24,16 +24,20 @@ const getRingtones = async () => {
     data.forEach(element => {
         const div = document.createElement('div')
         const overlay = document.createElement('div')
-        overlay.innerHTML = "<span id='ringtone-play-button' class='text-4xl cursor-pointer material-icons text-white'>play_circle</span>"
-        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center', 'justify-center', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
+        const img = document.createElement('img')
+        overlay.innerHTML = `<span id='ringtone-play-button' class='text-4xl cursor-pointer material-icons text-white my-auto'>play_circle</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
+       
+        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center','flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         overlayStyles.forEach((style) => {
             overlay.classList.add(style)
         })
 
-        const img = document.createElement('img')
-        div.style.backgroundColor = `bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`
-        div.style.borderRadius = '10px'
-        div.style.position = 'relative'
+        const divStyles = [`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]/80`,'relative','rounded-[10px]']
+
+        divStyles.forEach((style) => {
+            div.classList.add(style)
+        })
+
         img.src = element.imageUrl
         div.append(img)
         div.append(overlay)
@@ -69,15 +73,20 @@ const getWallpapers = async () => {
 
     data.forEach(element => {
         const div = document.createElement('div')
+        const img = document.createElement('img')
         const divStyles = ['rounded-lg', 'flex','h-[24vh]',`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
         const imgStyles = ['rounded-lg', 'w-full','h-full','object-cover']
-        const img = document.createElement('img')
+        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center','flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         const overlay = document.createElement('div')
-        overlay.innerHTML = ""
-        const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center', 'justify-center', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
+        overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
+       
         overlayStyles.forEach((style) => {
             overlay.classList.add(style)
         })
+        imgStyles.forEach((style) => {
+            img.classList.add(style)
+        })
+
         divStyles.forEach(style => {
             div.classList.add(style)
         })
