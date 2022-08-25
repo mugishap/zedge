@@ -24,19 +24,7 @@ Route::get('/wallpapers', function () {
 
 Route::get('/user', function () {
 
-    return view('user', ['page' => 'user']);
-});
-
-
-Route::get('/profile', function () {
-
     return view('profile', ['page' => 'profile']);
-});
-
-
-Route::get('/upload', function () {
-
-    return view('upload', ['page' => 'upload']);
 });
 
 

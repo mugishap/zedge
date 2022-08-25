@@ -21,19 +21,19 @@
         </g>
     </svg>
     <span class="text-md hidden md:flex font-medium text-black md:mx-4 xl:mx-6">TATTOO YOUR PHONE</span>
-    <div class="bg-slate-200 rounded h-12 mx-4 py-1 px-1 w-7/12 flex items-center flex-row justify-start">
+    <div class="bg-slate-200 rounded h-12 mx-4 py-1 px-1 w-9/12 md:w-7/12 flex items-center flex-row justify-start">
         <span class="material-icons mr-3 text-purple-500 text-2xl">
             search
         </span>
         <input class="w-11/12 h-full text-[#555] outline-0 border-0 text-sm bg-slate-200 placeholder:text-sm"
             type="text" placeholder="Search Wallpapers and Ringtones">
     </div>
-    <div class="hidden w-8 cursor-pointer h-8 rounded-full bg-purple-500 md:flex items-center justify-center">
-        <a href='/upload' class="material-icons text-white">
+    <div class="hidden p-1 cursor-pointer  rounded-full bg-purple-500 md:flex items-center justify-center">
+        <a href='/user' class="material-icons text-white">
             arrow_upward
         </a>
     </div>
-    <a href='/profile' class="material-icons mx-4  text-xl">
+    <a href='/user' class="material-icons sm:mx-2 mx-1 md:mx-4  text-xl">
         person_outlined
     </a>
     <span class="material-icons text-xl">

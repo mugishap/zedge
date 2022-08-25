@@ -1,5 +1,6 @@
 const getRingtones = async () => {
-
+    let ringtonesHolder = document.querySelector('.ringtones-holder')
+    ringtonesHolder.innerHTML = 'Loading...'
     const api = await fetch('https://api-gateway.zedge.net', {
         method: 'POST',
         headers: {
@@ -18,7 +19,6 @@ const getRingtones = async () => {
 
     const res = await api.json()
     console.log(res)
-    let ringtonesHolder = document.querySelector('.ringtones-holder')
     const data = res.data.browseAsUgc.items
 
     data.forEach(element => {
@@ -34,7 +34,7 @@ const getRingtones = async () => {
             overlay.classList.add(style)
         })
 
-        const divStyles = [`bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]/80`, 'h-[54vh]', 'relative', 'rounded-[10px]']
+        const divStyles = ['rounded-lg', 'flex', 'h-[54vh]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative']
 
         divStyles.forEach((style) => {
             div.classList.add(style)
@@ -50,6 +50,7 @@ const getRingtones = async () => {
         ringtonesHolder.append(div)
         const ringtonePlayButton = document.querySelector('#ringtone-play-button')
     });
+    ringtonesHolder.removeChild(ringtonesHolder.firstChild)
     ringtonesHolder.addEventListener('click', () => {
 
     })
@@ -58,7 +59,9 @@ const getRingtones = async () => {
 
 
 const getWallpapers = async () => {
-
+    
+    let wallpapersHolder = document.querySelector('.wallpapers-holder')
+    wallpapersHolder.innerHTML = 'Loading...'
     const api = await fetch('https://api-gateway.zedge.net', {
         method: 'POST',
         headers: {
@@ -77,7 +80,6 @@ const getWallpapers = async () => {
 
     const res = await api.json()
     console.log(res)
-    let wallpapersHolder = document.querySelector('.wallpapers-holder')
     const data = res.data.browseAsUgc.items
 
     data.forEach(element => {
@@ -107,11 +109,14 @@ const getWallpapers = async () => {
         div.append(overlay)
         wallpapersHolder.append(div)
     });
+    wallpapersHolder.removeChild(wallpapersHolder.firstChild)
     // return res
 }
 
 const getRingtonesAndWallpapers = async () => {
-
+    let allHolder = document.querySelector('.all-holder')
+    
+    allHolder.innerHTML = 'Loading...'
     const api = await fetch('https://api-gateway.zedge.net', {
         method: 'POST',
         headers: {
@@ -130,12 +135,12 @@ const getRingtonesAndWallpapers = async () => {
 
     const res = await api.json()
     console.log(res)
-    let allHolder = document.querySelector('.all-holder')
     const data = res.data.browseAsUgc.items
 
     data.forEach(element => {
         const div = document.createElement('div')
-        const divStyles = ['rounded-lg', 'flex', 'h-[54vh]', `bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
+        const divStyles = element.contentType === 'RINGTONE' ? ['px-4','rounded-lg', 'flex', 'h-[54vh]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative'] : ['px-4','rounded-lg', 'flex', 'h-[54vh]', 'items-center', 'justify-center', 'relative']
+
         const imgStyles = ['rounded-lg', 'w-full', 'h-full']
         const img = document.createElement('img')
         const overlay = document.createElement('div')
@@ -158,6 +163,7 @@ const getRingtonesAndWallpapers = async () => {
         div.append(overlay)
         allHolder.append(div)
     })
+    allHolder.removeChild(allHolder.firstChild)
 }
 
 window.addEventListener('load', () => {

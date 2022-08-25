@@ -11,6 +11,7 @@
     <script defer type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
     <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('images/download.png') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mui/3.7.1/js/mui.min.js" integrity="sha512-5LSZkoyayM01bXhnlp2T6+RLFc+dE4SIZofQMxy/ydOs3D35mgQYf6THIQrwIMmgoyjI+bqjuuj4fQcGLyJFYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body class="w-screen h-screen ">
