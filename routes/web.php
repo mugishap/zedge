@@ -27,6 +27,11 @@ Route::get('/user', function () {
     return view('profile', ['page' => 'profile']);
 });
 
+Route::get('/user/stats', function () {
+
+    return view('stats', ['page' => 'stats']);
+});
+
 
 Route::get('/live-wallpapers', function () {
     return view('live-wallpapers', ['page' => 'live-wallpapers']);

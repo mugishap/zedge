@@ -20,7 +20,7 @@
             </g>
         </g>
     </svg>
-    <span class="text-md hidden md:flex font-medium text-black md:mx-4 xl:mx-6">TATTOO YOUR PHONE</span>
+    <span class="text-md hidden md:flex font-medium text-black md:mx-2 xl:mx-4 whitespace-nowrap">TATTOO YOUR PHONE</span>
     <div class="bg-slate-200 rounded h-12 mx-4 py-1 px-1 w-9/12 md:w-7/12 flex items-center flex-row justify-start">
         <span class="material-icons mr-3 text-purple-500 text-2xl">
             search

@@ -139,7 +139,7 @@ const getRingtonesAndWallpapers = async () => {
 
     data.forEach(element => {
         const div = document.createElement('div')
-        const divStyles = element.contentType === 'RINGTONE' ? ['px-4','rounded-lg', 'flex', 'h-[54vh]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative'] : ['px-4','rounded-lg', 'flex', 'h-[54vh]', 'items-center', 'justify-center', 'relative']
+        const divStyles = element.contentType === 'RINGTONE' ? ['rounded-lg', 'flex', 'h-[54vh]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative'] : ['rounded-lg', 'flex', 'h-[54vh]', 'items-center', 'justify-center', 'relative']
 
         const imgStyles = ['rounded-lg', 'w-full', 'h-full']
         const img = document.createElement('img')
@@ -167,7 +167,17 @@ const getRingtonesAndWallpapers = async () => {
 }
 
 window.addEventListener('load', () => {
-    getRingtones()
-    getWallpapers()
-    getRingtonesAndWallpapers()
+   const path = window.location.pathname
+    if(path === '/') {
+    window.location.replace('/all')
+   }
+   else if(path  === '/ringtones') {
+       getRingtones()
+   }
+   else if(path  === '/wallpapers') {
+       getWallpapers()
+    }
+    else if(path  === '/all') {
+        getRingtonesAndWallpapers()
+    }
 })
