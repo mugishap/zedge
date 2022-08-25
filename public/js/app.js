@@ -139,7 +139,7 @@ const getRingtonesAndWallpapers = async () => {
 
     data.forEach(element => {
         const div = document.createElement('div')
-        const divStyles = element.contentType === 'RINGTONE' ? ['rounded-lg', 'flex', 'h-[54vh]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative'] : ['rounded-lg', 'flex', 'h-[54vh]', 'items-center', 'justify-center', 'relative']
+        const divStyles = element.contentType === 'RINGTONE' ? ['rounded-lg','aspect-[1/1.7]', 'flex', 'h-[54vh]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative'] : ['rounded-lg', 'flex', 'h-[54vh]', 'items-center','aspect-[1/1.7]', 'justify-center', 'relative']
 
         const imgStyles = ['rounded-lg', 'w-full', 'h-full']
         const img = document.createElement('img')
