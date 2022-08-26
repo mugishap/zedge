@@ -23,7 +23,7 @@
 </div>
 
 
-<div class="wallpapers-holder mt-4 px-8 card-holder w-screen grid xl:grid-cols-7 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 overflow-y-scroll">
+<div class="wallpapers-holder mt-4 px-8 card-holder w-screen grid xl:grid-cols-7 md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-3 overflow-y-scroll">
 
 </div>
 </body>
