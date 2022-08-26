@@ -24,7 +24,7 @@
     <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center  border-b-purple-500 px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="/live-wallpapers">Live Wallpapers</a></div>
 </div>
 
-    <div class="ringtones-holder mt-4 card-holder w-screen grid xl:grid-cols-7 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 overflow-y-scroll">
+    <div class="ringtones-holder px-4 mt-4 card-holder w-screen grid xl:grid-cols-7 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-3 overflow-y-scroll">
 
     </div>
 </body>

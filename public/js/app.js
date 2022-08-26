@@ -139,12 +139,12 @@ const getRingtonesAndWallpapers = async () => {
 
     data.forEach(element => {
         const div = document.createElement('div')
-        const divStyles = element.contentType === 'RINGTONE' ? ['rounded-lg','aspect-[1/1.7]', 'flex', 'h-[54vh]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative'] : ['rounded-lg', 'flex', 'h-[54vh]', 'items-center','aspect-[1/1.7]', 'justify-center', 'relative']
+        const divStyles = element.contentType === 'RINGTONE' ? ['rounded-lg','aspect-[1/1.7]', 'flex', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative'] : ['rounded-lg', 'flex', 'items-center','aspect-[1/1.7]', 'justify-center', 'relative']
 
         const imgStyles = ['rounded-lg', 'w-full', 'h-full']
         const img = document.createElement('img')
         const overlay = document.createElement('div')
-        element.contentType === 'RINGTONE' ? overlay.innerHTML = `<span style='transform: scale(3);' id='ringtone-play-button' class='scale-1.05 md:scale-110 cursor-pointer material-icons rounded-full text-white my-auto border-white border-2 p-[5px]'>play_arrow</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>` : overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
+        element.contentType === 'RINGTONE' ? overlay.innerHTML = `<span style='transform: scale(3);' id='ringtone-play-button' class=' cursor-pointer material-icons rounded-full text-white my-auto border-white border-2 p-[5px]'>play_arrow</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>` : overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
         const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center', 'flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         overlayStyles.forEach((style) => {
             overlay.classList.add(style)
