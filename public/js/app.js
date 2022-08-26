@@ -34,7 +34,7 @@ const getRingtones = async () => {
             overlay.classList.add(style)
         })
 
-        const divStyles = ['rounded-lg', 'flex', 'h-[54vh]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative']
+        const divStyles = ['rounded-lg', 'flex', 'aspect-[1/1.7]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative']
 
         divStyles.forEach((style) => {
             div.classList.add(style)
@@ -85,7 +85,7 @@ const getWallpapers = async () => {
     data.forEach(element => {
         const div = document.createElement('div')
         const img = document.createElement('img')
-        const divStyles = ['rounded-lg', 'flex', 'h-[54vh]', `bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
+        const divStyles = ['rounded-lg', 'flex', 'aspect-[1/1.7]', `bg-[#${Math.floor(Math.random() * 16777215).toString(16)}]`, 'items-center', 'justify-center', 'relative']
         const imgStyles = ['rounded-lg', 'w-full', 'h-full']
         const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center', 'flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         const overlay = document.createElement('div')
@@ -144,7 +144,7 @@ const getRingtonesAndWallpapers = async () => {
         const imgStyles = ['rounded-lg', 'w-full', 'h-full']
         const img = document.createElement('img')
         const overlay = document.createElement('div')
-        element.contentType === 'RINGTONE' ? overlay.innerHTML = `<span style='transform: scale(3);' id='ringtone-play-button' class=' cursor-pointer material-icons rounded-full text-white my-auto border-white border-2 p-[5px]'>play_arrow</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>` : overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
+        element.contentType === 'RINGTONE' ? overlay.innerHTML = `<span style='transform: scale(1.5);' id='ringtone-play-button' class=' cursor-pointer material-icons rounded-full text-white my-auto border-white border-2 p-[5px]'>play_arrow</span><span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>` : overlay.innerHTML = `<span class='text-white w-full px-3 pb-3 text-start'>${element.title}</span>`
         const overlayStyles = ['bg-gradient-to-t', 'from-black/70', 'rounded-lg', 'flex', 'items-center', 'flex-col', 'justify-end', 'w-full', 'h-full', 'absolute', 'top-0', 'left-0']
         overlayStyles.forEach((style) => {
             overlay.classList.add(style)
