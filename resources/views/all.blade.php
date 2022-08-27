@@ -24,10 +24,10 @@
 <x-navbar></x-navbar>
 
 <div class="w-screen h-14 pt-[3px] pb-0 overflow-x-scroll shadow-[#555] shadow-sm bg-white flex items-center justify-start sm:justify-center">
-    <div class='cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center border-b-4  border-b-purple-500 sm:px-3 text-center mx-2'><a class="text-purple-500 w-full h-full flex items-center justify-center" href="/all">All</a></div>
-    <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center  border-b-purple-500 sm:px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="/wallpapers">Wallpapers</a></div>
-    <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center border-b-purple-500 sm:px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="/ringtones">Ringtones</a></div>
-    <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center  border-b-purple-500 sm:px-3 text-center mx-2"><a class="w-full whitespace-nowrap h-full flex items-center justify-center" href="/live-wallpapers">Live Wallpapers</a></div>
+    <div class='cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center border-b-4  border-b-purple-500 px-3 text-center mx-2'><a class="text-purple-500 w-full h-full flex items-center justify-center" href="/all">All</a></div>
+    <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center  border-b-purple-500 px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="/wallpapers">Wallpapers</a></div>
+    <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center border-b-purple-500 px-3 text-center mx-2"><a class="w-full h-full flex items-center justify-center" href="/ringtones">Ringtones</a></div>
+    <div class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center  border-b-purple-500 px-3 text-center mx-2"><a class="w-full whitespace-nowrap h-full flex items-center justify-center" href="/live-wallpapers">Live Wallpapers</a></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mui/3.7.1/js/mui.min.js" integrity="sha512-5LSZkoyayM01bXhnlp2T6+RLFc+dE4SIZofQMxy/ydOs3D35mgQYf6THIQrwIMmgoyjI+bqjuuj4fQcGLyJFYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </div>
 
