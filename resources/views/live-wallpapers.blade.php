@@ -32,12 +32,12 @@
         </div>
         <div
             class="cursor-pointer text-lg text-slate-700 h-full flex items-center justify-center border-b-4  border-b-purple-500 px-3 text-center mx-2">
-            <a class="w-full h-full text-purple-500  flex items-center justify-center" href="/live-wallpapers">Live
+            <a class="w-full h-full text-purple-500 whitespace-nowrap  flex items-center justify-center" href="/live-wallpapers">Live
                 Wallpapers</a>
         </div>
     </div>
     <div class='w-full h-fit mt-8 flex items-center justify-start flex-col'>
-        <h2 class='font-semibold text-xl my-4'>Live Wallpapers</h2>
+        <h2 class='font-semibold text-xl my-4 whitespace-nowrap'>Live Wallpapers</h2>
         <span class='my-4 text-center'>
             Imagine having cool video effects as the background on your home screen. Download the <br> Zedge app and
             you've got it!
