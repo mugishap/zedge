@@ -49,7 +49,7 @@
     <div class="mx-2 text-lg px-3 py-1 text-slate-700 font-medium text-base cursor-pointer text-center flex items-center justify-center bg-slate-200 rounded-full">Galaxy</div>
     <div class="mx-2 text-lg px-3 py-1 text-slate-700 font-medium text-base cursor-pointer text-center flex items-center justify-center bg-slate-200 rounded-full">Galaxy</div>
   </div>
-  <img src="https://fsb.zobj.net/crop.php?r=wwhDocVdTV2IYcdj1Cy9aak7nkFHxb_2nb9KY3ZXGoomdcFGO5rJ8cWuskh7U17pMmxf8WaCox6jPkJDfPru3RD5m3A6zhVPeWlrmiUeb6lp7KY4wgaotLVpgCifAql2Ukj0c4Fln6eDOZj-72scXAHJscQLGc9CqoiWoIbpMAQc2Y91E9Oymw_adWBhkRSQ62ZrN19aYNQmdZFT" alt="" class="w-64 h-[60vh] object-cover rounded">
+  <img src="https://fsb.zobj.net/crop.php?r=wwhDocVdTV2IYcdj1Cy9aak7nkFHxb_2nb9KY3ZXGoomdcFGO5rJ8cWuskh7U17pMmxf8WaCox6jPkJDfPru3RD5m3A6zhVPeWlrmiUeb6lp7KY4wgaotLVpgCifAql2Ukj0c4Fln6eDOZj-72scXAHJscQLGc9CqoiWoIbpMAQc2Y91E9Oymw_adWBhkRSQ62ZrN19aYNQmdZFT" alt="" class="w-64 h-[60vh] my-4 mx-auto object-cover rounded">
 </body>
 
 </html>
