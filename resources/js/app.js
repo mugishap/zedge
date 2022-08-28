@@ -29,6 +29,3 @@ window.onload(() => {
 
 
 
-const getRingtone = () => {
-    const ringtoneID = window.location
-  }

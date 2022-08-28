@@ -181,3 +181,29 @@ window.addEventListener('load', () => {
         getRingtonesAndWallpapers()
     }
 })
+
+
+const getRingtone = async() => {
+    const ringtoneID = window.location.pathname.split('/ringtone/')[1]
+    console.log(ringtoneID)
+    const api = await fetch('',
+    {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(
+            {
+                "query": "\n    query contentDownloadUrl($itemId: ID!) {\n      contentDownloadUrlAsUgc(itemId: $itemId)\n    }\n  ",
+                "variables": {
+                    "itemId": ringtoneID
+                }
+            }
+        )
+    }
+    )
+  }
+
+  
+const getWallpaper = () => {
+    const ringtoneID = window.location.pathname.split('/ringtone/')[1]
+    console.log(ringtoneID)
+  }
