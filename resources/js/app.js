@@ -25,3 +25,10 @@ window.onload(() => {
     // getRingtones()
     console.log("loaded")
 })
+
+
+
+
+const getRingtone = () => {
+    const ringtoneID = window.location
+  }

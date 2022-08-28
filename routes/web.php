@@ -33,6 +33,17 @@ Route::get('/user/stats', function () {
 });
 
 
+Route::get('/ringtone/{ringtoneID}', function () {
+
+    return view('download-ringtone', ['page' => 'download']);
+});
+
+Route::get('/wallpaper/{wallpaperID}', function () {
+
+    return view('download-wallpaper', ['page' => 'download']);
+});
+
+
 Route::get('/live-wallpapers', function () {
     return view('live-wallpapers', ['page' => 'live-wallpapers']);
 });
