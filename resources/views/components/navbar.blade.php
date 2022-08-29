@@ -38,7 +38,7 @@
     <a href='/user' class="material-icons sm:mx-2 mx-1 md:mx-4  text-xl">
         person_outlined
     </a>
-    <span class="material-icons menu-nav text-xl">
+    <span onclick='toggleMenu()' class="material-icons menu-nav text-xl">
         menu
     </span>
 </div>

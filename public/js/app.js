@@ -34,6 +34,10 @@ const getRingtones = async () => {
             overlay.classList.add(style)
         })
 
+        div.addEventListener('click', () => {
+            window.location.pathname = `/ringtone/${element.id}`
+        })
+
         const divStyles = ['rounded-lg', 'flex', 'aspect-[1/1.7]', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative']
 
         divStyles.forEach((style) => {
@@ -101,6 +105,11 @@ const getWallpapers = async () => {
         divStyles.forEach(style => {
             div.classList.add(style)
         })
+
+        div.addEventListener('click', () => {
+            window.location.pathname = `/wallpaper/${element.id}`
+        })
+
         img.style.width = '100%'
         img.style.height = '100%'
         img.style.objectFit = 'cover'
@@ -251,31 +260,61 @@ const getWallpaper = async () => {
 
 const toggleMenu = () => {
     const menu = document.querySelector('.menu-nav')
-    menu.innerHTML='close'
+    
     const div = document.createElement('div')
-    const divStyles = ['absolute','w-screen','h-screen','left-0','top-0','bg-black/70']
+    const divStyles = ['menu-div','absolute','flex', 'w-screen', 'h-screen', 'left-0', 'top-0', 'bg-[#323c59cc]']
     const overlayDiv = document.createElement('div')
-    const overlayDivStyles = ['z-[2]','w-screen','h-screen',]
+    const overlayDivStyles = ['z-[2]', 'w-screen', 'h-screen',]
     const whiteDiv = document.createElement('div')
-    const whiteDivStyles = ['w-1/5','z-[4]', 'h-full','flex','flex-col','items-center','justify-start','bg-slate-400']
+    const whiteDivStyles = ['py-3','px-4','w-2/5', 'z-[4]', 'h-full', 'flex', 'flex-col', 'items-start', 'justify-start', 'bg-white','overflow-y-scroll']
+
+    menu.addEventListener('click', () => {
+        div.style.display = 'none'
+    })
 
     document.body.append(div)
     div.append(overlayDiv)
     div.append(whiteDiv)
 
-    overlayDiv.addEventListener('click',()=>{
+    overlayDiv.addEventListener('click', () => {
         div.style.display = 'none'
     })
 
-    divStyles.forEach(style=>{
+    divStyles.forEach(style => {
         div.classList.add(style)
     })
 
-    overlayDivStyles.forEach(style=>{
+    overlayDivStyles.forEach(style => {
         overlayDiv.classList.add(style)
     })
 
-    whiteDivStyles.forEach(style=>{
+    whiteDivStyles.forEach(style => {
         whiteDiv.classList.add(style)
     })
+    whiteDiv.innerHTML = `
+    <span onclick="()=>{setDisplayNone()}" class='material-icons my-4'>close</span>
+    <span class='font-light text-base text-slate-400 my-3'>Content</span>
+    <ul>
+    <li class='text-lg font-medium text-slate-700 my-1'><a href='/all'>Home</a></li>
+    <li class='text-lg font-medium text-slate-700 my-1'><a href='/wallpapers'>Wallpapers</a></li>
+    <li class='text-lg font-medium text-slate-700 my-1'><a href='/ringtones'>Ringtones</a></li>
+    </ul>
+
+    <span class='font-light text-base text-slate-400 my-3'>Share your content</span>
+    <a class="flex items-center justify-center bg-purple-500 rounded-full w-32 py-2 px-3 text-white font-medium">Upload</a>
+
+    <span class='font-light text-base text-slate-400 my-3'>Get the app</span>
+
+    <div class='flex flex-col items-center justify-center'>
+    <a class='w-32 my-2 mx-2' href='https://itunes.apple.com/app/apple-store/id1086101495?pt=1393449&mt=8'><img src='https://www.zedge.net/assets/8c4986ee4828b47d16f5cd694ef065f2.svg' alt='' /></a>
+    <a class='w-32 my-2 mx-2' href='https://play.google.com/store/apps/details?id=net.zedge.android&referrer=utm_source%3Dzedge_net%26utm_medium%3Dweb'><img src='https://www.zedge.net/assets/21a267aba366f4957d18cde5a4bb0989.png' alt='' /></a>
+    </div>
+
+
+    `
+}
+
+const setDisplayNone = () => {
+const menuDiv = document.querySelector('.menu-div')
+menuDiv.style.display = 'none'
 }

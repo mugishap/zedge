@@ -22,14 +22,14 @@
     <div class='flex items-start pt-2 justify-center'>
       <img
         src="https://fsa.zobj.net/crop.php?r=XrHrAlBxGAoCPG81lpMw0ChQ9ZpkmGQuZfvO4jscjjkjCEKTNF6461ovAQVMRPBm11eRltyord2rMmbt9sjZK63yX3YSdMemzLKcSNa7vsZF85Ec4mDJ979Cf8jFmbdbAh2IAuuS5fTTpxtbRC6Sc08XVS3YGROpIplnCXfBa1IVZCL_Or43qhcWOWM"
-        class=' mx-4 w-14 h-14 rounded-full object-cover' alt="">
+        class='creator-image mx-4 w-14 h-14 rounded-full object-cover' alt="">
       <div class='flex flex-col items-start justify-start'>
-        <h2 class='text-xl font-medium'>Galaxy wallpaper</h2>
-        <span class="text-slate-500 ">by JeanCR26</span>
+        <h2 class='text-xl font-medium ringtone-name'>Galaxy ringtone</h2>
+        <span class="text-slate-500 ">by <span class='creator-name'>JeanCR26</span></span>
       </div>
       <div class='justify-start flex flex pt-2 mx-3 text-slate-500  items-start flex'>
         <span class="material-icons">arrow_downward</span>
-        <span>
+        <span class='downloads'>
           345482
         </span>
       </div>
@@ -40,7 +40,7 @@
           share
         </span>
       </button>
-      <button class="bg-purple-500 rounded-full w-32 py-2 px-3 text-white font-medium">Download</button>
+      <button class="download-button bg-purple-500 rounded-full w-32 py-2 px-3 text-white font-medium">Download</button>
     </div>
   </div>
   <div class="w-full px-3 flex items-center justify-start">
@@ -49,7 +49,7 @@
     <div class="mx-2 text-lg px-3 py-1 text-slate-700 font-medium text-base cursor-pointer text-center flex items-center justify-center bg-slate-200 rounded-full">Galaxy</div>
     <div class="mx-2 text-lg px-3 py-1 text-slate-700 font-medium text-base cursor-pointer text-center flex items-center justify-center bg-slate-200 rounded-full">Galaxy</div>
   </div>
-  <img src="https://fsb.zobj.net/crop.php?r=wwhDocVdTV2IYcdj1Cy9aak7nkFHxb_2nb9KY3ZXGoomdcFGO5rJ8cWuskh7U17pMmxf8WaCox6jPkJDfPru3RD5m3A6zhVPeWlrmiUeb6lp7KY4wgaotLVpgCifAql2Ukj0c4Fln6eDOZj-72scXAHJscQLGc9CqoiWoIbpMAQc2Y91E9Oymw_adWBhkRSQ62ZrN19aYNQmdZFT" alt="" class="w-64 h-[60vh] my-4 mx-auto object-cover rounded">
+  <img src="https://fsb.zobj.net/crop.php?r=wwhDocVdTV2IYcdj1Cy9aak7nkFHxb_2nb9KY3ZXGoomdcFGO5rJ8cWuskh7U17pMmxf8WaCox6jPkJDfPru3RD5m3A6zhVPeWlrmiUeb6lp7KY4wgaotLVpgCifAql2Ukj0c4Fln6eDOZj-72scXAHJscQLGc9CqoiWoIbpMAQc2Y91E9Oymw_adWBhkRSQ62ZrN19aYNQmdZFT" alt="" class="ringtone-image w-64 h-[60vh] my-4 mx-auto object-cover rounded">
 </body>
 
 </html>
