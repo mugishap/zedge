@@ -1,4 +1,6 @@
 <script src="https://cdn.tailwindcss.com"></script>
+<script defer type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
+
 <div class="w-screen h-16 bg-white flex items-center border-b-2 border-[#eee]  justify-start">
     <svg class="md:flex hidden w-32 mx-4" viewBox="0 0 287 39" role="img" aria-label="Zedge logo">
         <title>Zedge logo</title>
@@ -36,7 +38,7 @@
     <a href='/user' class="material-icons sm:mx-2 mx-1 md:mx-4  text-xl">
         person_outlined
     </a>
-    <span class="material-icons text-xl">
+    <span class="material-icons menu-nav text-xl">
         menu
     </span>
 </div>

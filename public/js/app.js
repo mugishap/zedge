@@ -205,33 +205,77 @@ const getRingtone = async () => {
     )
     const data = await api.json()
     console.log(data)
+
+
+    document.title = 'Name of ringtone'
+
+    const creatorImage = document.querySelector('.creator-image')
+    const creatorName = document.querySelector('.creator-name')
+    const downloads = document.querySelector('.downloads')
+    const ringtoneName = document.querySelector('.ringtone-name')
+    const ringtoneImage = document.querySelector('.ringtone-image')
+
+
 }
 
 
-const getWallpaper = () => {
+const getWallpaper = async () => {
     const wallpaperID = window.location.pathname.split('/wallpaper/')[1]
     console.log(wallpaperID)
     const api = await fetch('https://api-gateway.zedge.net/',
-    {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(
-            {
-                "query": "\n    query contentDownloadUrl($itemId: ID!) {\n      contentDownloadUrlAsUgc(itemId: $itemId)\n    }\n  ",
-                "variables": {
-                    "itemId": wallpaperID
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(
+                {
+                    "query": "\n    query contentDownloadUrl($itemId: ID!) {\n      contentDownloadUrlAsUgc(itemId: $itemId)\n    }\n  ",
+                    "variables": {
+                        "itemId": wallpaperID
+                    }
                 }
-            }
-        )
-    }
-)
-const data = await api.json()
-console.log(data)
-document.title='Name of wallpaper'
+            )
+        }
+    )
+    const data = await api.json()
+    console.log(data)
 
-const creatorImage = document.querySelector('.creator-image')
-const creatorName = document.querySelector('.creator-name')
-const downloads = document.querySelector('.downloads')
-const wallpaperName = document.querySelector('.wallpaper-name')
-const wallpaperImage = document.querySelector('.wallpaper-image')
+    document.title = 'Name of wallpaper'
+
+    const creatorImage = document.querySelector('.creator-image')
+    const creatorName = document.querySelector('.creator-name')
+    const downloads = document.querySelector('.downloads')
+    const wallpaperName = document.querySelector('.wallpaper-name')
+    const wallpaperImage = document.querySelector('.wallpaper-image')
+
+}
+
+const toggleMenu = () => {
+    const menu = document.querySelector('.menu-nav')
+    menu.innerHTML='close'
+    const div = document.createElement('div')
+    const divStyles = ['absolute','w-screen','h-screen','left-0','top-0','bg-black/70']
+    const overlayDiv = document.createElement('div')
+    const overlayDivStyles = ['z-[2]','w-screen','h-screen',]
+    const whiteDiv = document.createElement('div')
+    const whiteDivStyles = ['w-1/5','z-[4]', 'h-full','flex','flex-col','items-center','justify-start','bg-slate-400']
+
+    document.body.append(div)
+    div.append(overlayDiv)
+    div.append(whiteDiv)
+
+    overlayDiv.addEventListener('click',()=>{
+        div.style.display = 'none'
+    })
+
+    divStyles.forEach(style=>{
+        div.classList.add(style)
+    })
+
+    overlayDivStyles.forEach(style=>{
+        overlayDiv.classList.add(style)
+    })
+
+    whiteDivStyles.forEach(style=>{
+        whiteDiv.classList.add(style)
+    })
 }
