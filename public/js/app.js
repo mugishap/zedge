@@ -59,7 +59,7 @@ const getRingtones = async () => {
 
 
 const getWallpapers = async () => {
-    
+
     let wallpapersHolder = document.querySelector('.wallpapers-holder')
     wallpapersHolder.innerHTML = 'Loading...'
     const api = await fetch('https://api-gateway.zedge.net', {
@@ -115,7 +115,7 @@ const getWallpapers = async () => {
 
 const getRingtonesAndWallpapers = async () => {
     let allHolder = document.querySelector('.all-holder')
-    
+
     allHolder.innerHTML = 'Loading...'
     const api = await fetch('https://api-gateway.zedge.net', {
         method: 'POST',
@@ -139,7 +139,7 @@ const getRingtonesAndWallpapers = async () => {
 
     data.forEach(element => {
         const div = document.createElement('div')
-        const divStyles = element.contentType === 'RINGTONE' ? ['rounded-lg','aspect-[1/1.7]', 'flex', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative'] : ['rounded-lg', 'flex', 'items-center','aspect-[1/1.7]', 'justify-center', 'relative']
+        const divStyles = element.contentType === 'RINGTONE' ? ['rounded-lg', 'aspect-[1/1.7]', 'flex', 'bg-gradient-to-r', `from-[#${element.meta.gradientStart}]`, `to-[#${element.meta.gradientEnd}]`, 'items-center', 'justify-center', 'relative'] : ['rounded-lg', 'flex', 'items-center', 'aspect-[1/1.7]', 'justify-center', 'relative']
 
         const imgStyles = ['rounded-lg', 'w-full', 'h-full']
         const img = document.createElement('img')
@@ -157,6 +157,9 @@ const getRingtonesAndWallpapers = async () => {
         })
         img.style.width = '100%'
         img.style.height = '100%'
+        div.addEventListener('click', () => {
+            element.contentType === 'RINGTONE' ? window.location.pathname = `/ringtone/${element.id}` : window.location.pathname = `/wallpaper/${element.id}`
+        })
         img.style.objectFit = 'cover'
         img.src = element.imageUrl
         div.append(img)
@@ -167,43 +170,68 @@ const getRingtonesAndWallpapers = async () => {
 }
 
 window.addEventListener('load', () => {
-   const path = window.location.pathname
-    if(path === '/') {
-    window.location.replace('/all')
-   }
-   else if(path  === '/ringtones') {
-       getRingtones()
-   }
-   else if(path  === '/wallpapers') {
-       getWallpapers()
+    const path = window.location.pathname
+    if (path === '/') {
+        window.location.replace('/all')
     }
-    else if(path  === '/all') {
+    else if (path === '/ringtones') {
+        getRingtones()
+    }
+    else if (path === '/wallpapers') {
+        getWallpapers()
+    }
+    else if (path === '/all') {
         getRingtonesAndWallpapers()
     }
 })
 
 
-const getRingtone = async() => {
+const getRingtone = async () => {
     const ringtoneID = window.location.pathname.split('/ringtone/')[1]
     console.log(ringtoneID)
-    const api = await fetch('',
+    const api = await fetch('https://api-gateway.zedge.net/',
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(
+                {
+                    "query": "\n    query contentDownloadUrl($itemId: ID!) {\n      contentDownloadUrlAsUgc(itemId: $itemId)\n    }\n  ",
+                    "variables": {
+                        "itemId": ringtoneID
+                    }
+                }
+            )
+        }
+    )
+    const data = await api.json()
+    console.log(data)
+}
+
+
+const getWallpaper = () => {
+    const wallpaperID = window.location.pathname.split('/wallpaper/')[1]
+    console.log(wallpaperID)
+    const api = await fetch('https://api-gateway.zedge.net/',
     {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify(
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(
             {
                 "query": "\n    query contentDownloadUrl($itemId: ID!) {\n      contentDownloadUrlAsUgc(itemId: $itemId)\n    }\n  ",
                 "variables": {
-                    "itemId": ringtoneID
+                    "itemId": wallpaperID
                 }
             }
         )
     }
-    )
-  }
+)
+const data = await api.json()
+console.log(data)
+document.title='Name of wallpaper'
 
-  
-const getWallpaper = () => {
-    const ringtoneID = window.location.pathname.split('/ringtone/')[1]
-    console.log(ringtoneID)
-  }
+const creatorImage = document.querySelector('.creator-image')
+const creatorName = document.querySelector('.creator-name')
+const downloads = document.querySelector('.downloads')
+const wallpaperName = document.querySelector('.wallpaper-name')
+const wallpaperImage = document.querySelector('.wallpaper-image')
+}
