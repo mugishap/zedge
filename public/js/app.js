@@ -218,6 +218,12 @@ const getRingtone = async () => {
 
     document.title = 'Name of ringtone'
 
+    const downloadButton = document.querySelector('.download-button')
+    console.log(downloadButton)
+    downloadButton.addEventListener('click', () => {
+        window.location.replace(data.data.contentDownloadUrlAsUgc)
+    })
+
     const creatorImage = document.querySelector('.creator-image')
     const creatorName = document.querySelector('.creator-name')
     const downloads = document.querySelector('.downloads')
@@ -249,7 +255,11 @@ const getWallpaper = async () => {
     console.log(data)
 
     document.title = 'Name of wallpaper'
-
+    const downloadButton = document.querySelector('.download-button')
+    console.log(downloadButton);
+    downloadButton.addEventListener('click', () => {
+        window.location.replace(data.data.contentDownloadUrlAsUgc)
+    })
     const creatorImage = document.querySelector('.creator-image')
     const creatorName = document.querySelector('.creator-name')
     const downloads = document.querySelector('.downloads')
@@ -260,13 +270,13 @@ const getWallpaper = async () => {
 
 const toggleMenu = () => {
     const menu = document.querySelector('.menu-nav')
-    
+
     const div = document.createElement('div')
-    const divStyles = ['menu-div','absolute','flex', 'w-screen', 'h-screen', 'left-0', 'top-0', 'bg-[#323c59cc]']
+    const divStyles = ['menu-div', 'absolute', 'flex', 'w-screen', 'h-screen', 'left-0', 'top-0', 'bg-[#323c59cc]']
     const overlayDiv = document.createElement('div')
     const overlayDivStyles = ['z-[2]', 'w-screen', 'h-screen',]
     const whiteDiv = document.createElement('div')
-    const whiteDivStyles = ['py-3','px-4','w-2/5', 'z-[4]', 'h-full', 'flex', 'flex-col', 'items-start', 'justify-start', 'bg-white','overflow-y-scroll']
+    const whiteDivStyles = ['py-3', 'px-4', 'w-2/5', 'z-[4]', 'h-full', 'flex', 'flex-col', 'items-start', 'justify-start', 'bg-white', 'overflow-y-scroll']
 
     menu.addEventListener('click', () => {
         div.style.display = 'none'
@@ -315,6 +325,6 @@ const toggleMenu = () => {
 }
 
 const setDisplayNone = () => {
-const menuDiv = document.querySelector('.menu-div')
-menuDiv.style.display = 'none'
+    const menuDiv = document.querySelector('.menu-div')
+    menuDiv.style.display = 'none'
 }
